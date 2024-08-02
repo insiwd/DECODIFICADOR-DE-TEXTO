@@ -4,7 +4,7 @@ const button = document.querySelector(".button");
 const resultArea = document.getElementById("resultArea");
 
 
-function btnEncriptar() {
+function btnCriptografar() {
     const textoEncriptado = encriptar(textArea.value);
     resultArea.value = textoEncriptado;
     textArea.value = "";
@@ -30,7 +30,7 @@ function encriptar(stringEncriptada) {
     return stringEncriptada;
 }
 
-function btnDesencriptar() {
+function btnDescriptografar() {
     const textoDesencriptado = desencriptar(resultArea.value)
     resultArea.value = textoDesencriptado;
     textArea.value = "";
@@ -58,7 +58,7 @@ function desencriptar(stringDesencriptada) {
     return stringDesencriptada;
 }
 
-function copiar() {
+function btnCopiar() {
     navigator.clipboard.writeText(resultArea.value);
-
+    resultArea.value = "";
 }

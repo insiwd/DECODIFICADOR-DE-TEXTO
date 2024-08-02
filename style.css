@@ -13,6 +13,10 @@
     width: 100vw;
     height: 100vh;
     background-color: green;
+
+    display: flex;
+    justify-content: center;
+    align-items:flex-start;
 }
 
 #scanLines,
@@ -32,7 +36,12 @@
 }
 
 #content {
-    padding: 6%;
+    position: relative;
+    padding: 5% 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
     font-family: "VT323", monospace;
     font-weight: normal;
     font-size: 40px;
@@ -45,21 +54,27 @@ p {
     font-size: 35px;
 }
 
-span {
-    font-size: 30px;
-}
-
 #inputArea {
+
     display: flex;
-    margin-top: -30px;
-    margin-left: 130px;
+    flex-direction: row;
+    gap: 20%;
+
+    max-width: 1000px;
+
+    margin-left: 15%;
 }
 
-#textArea {
-    display: flex;
+#textArea,
+#resultArea {
 
-    width: 10em;
-    height: 10em;
+    flex: 1;
+    max-width: 30%;
+
+    margin-top: 1em;
+
+    width: 25%;
+    height: 40vh;
 
     font-size: 30px;
     font-family: "VT323", monospace;
@@ -77,36 +92,40 @@ span {
     color: rgb(111, 170, 23);
 }
 
-.button {
-    width: 9em;
-    height: 4em;
-    margin-top: 250px;
-    margin-left: 30px;
+#buttonArea {
+    margin-top: 20px;
+    margin-left: -10%;
+    display: flex;
+    flex-direction: row;
+    gap: 15%;
 
+    align-items: center;
+    align-self: center;
+}
+
+.button {
+
+    padding: 0.5em;
 
     color: greenyellow;
-    background-color: rgb(12, 85, 12);
+    background-color: rgb(18, 51, 18);
     border: none;
     font-family: "VT323";
-    font-size: 14px;
-    padding: 20px;
+    font-size: 20px;
     cursor: pointer;
-    border-radius: 20px;
+    border-radius: 10px;
 
 }
 
-
 #resultArea {
-    height: 12em;
 
-    float: right;
-    display: block;
-    margin-top: -2%;
-    margin-right: 2%;
+    flex: 1;
+    max-width: 30%;
+
+    width: 60vw;
+    height: 40vh;
 
     font-size: 30px;
-    padding-left: 5px;
-
     resize: none;
     color: rgb(201, 241, 23);
     background-color: green;
@@ -119,9 +138,9 @@ span {
 }
 
 #resultadoParagraph {
-    display: block;
+
     margin-top: -30%;
-    margin-left: 24em;
+    margin-left: 62%;
 }
 
 

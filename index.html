@@ -9,40 +9,45 @@
 </head>
 
 <body>
+
     <div id="screen">
 
-        <img src="assets/3a57f4a9ca1419203565fd9e8f90cd2d2eb7668a.png" id="scanLines" class="noselect">
-        <img src="assets/bezel.png" id="bezel" class="noselect">
+
+        <img src="assets/3a57f4a9ca1419203565fd9e8f90cd2d2eb7668a.png" id="scanLines" class="noselect" alt="Scan Lines">
+        <img src="assets/bezel.png" id="bezel" class="noselect" alt="Bezel">
+
 
         <div id="content">
-            <h1> > dec0dific4d0r</h1>
+
+            <h1>> dec0dific4d0r</h1>
             <p>####</p>
-            <p> > apenas letras
-                <span style="color: rgb(7, 8, 8);">minúsculas
-                </span>
-                e sem
-                <span style="color:rgb(7, 8, 8) ;">acento</span>
-            </p>
+            <p>> apenas letras <span style="color: rgb(7, 8, 8);">minúsculas</span> e sem <span
+                    style="color:rgb(7, 8, 8);">acento</span></p>
+            <!-- <span>anon@root:</span> -->
 
-            <span>anon@root:</span>
+
             <div id="inputArea">
-                
-                <textarea id="textArea" class="cursor" placeholder="digite seu texto aqui" name="textarea"
-                wrap="hard"></textarea>
-                
-                <button class="button" onclick="btnEncriptar()">DECODIFICAR</button>
-                <button class="button" onclick="btnDesencriptar()">DESCRIPTOGRAFAR</button>
-                <button class="button" onclick="copiar()">COPIAR</button>
 
+                <textarea id="textArea" class="cursor" placeholder="digite seu texto aqui" name="textarea"
+                    wrap="hard"></textarea>
+
+                <textarea id="resultArea" disabled cols="20" rows="5"
+                    placeholder="Digite um texto para criptografar ou descriptografar!"></textarea>
             </div>
-            
-            <p id="resultadoParagraph">resultado:</p>
-            <div id="resultado">
-                <textarea id="resultArea" disabled cols="20" rows="5" placeholder="Digite um texto para criptografar ou desriptografar!" ></textarea>
+
+
+            <div id="buttonArea">
+                <button class="button" onclick="btnCriptografar()">CRIPTOGRAFAR</button>
+                <button class="button" onclick="btnDescriptografar()">DESCRIPTOGRAFAR</button>
+                <button class="button" onclick="btnCopiar()">COPIAR</button>
             </div>
-            
+
+
+            <!-- <p id="resultadoParagraph">resultado:</p> -->
+
         </div>
     </div>
+
     <script src="script.js"></script>
 </body>
 
