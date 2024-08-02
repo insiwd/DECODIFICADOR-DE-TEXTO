@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+}
+
+#screen {
+    /* para trabalhar com overlays */
+    position: relative;
+
+    width: 100vw;
+    height: 100vh;
+    background-color: green;
+}
+
+#scanLines,
+#bezel {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+
+    /* isso evita que o background seja arrastado ao usar o mouse */
+    pointer-events: none;
+}
+
+#scanLines {
+    opacity: 60%;
+}
+
+#content {
+    padding: 6%;
+    font-family: "VT323", monospace;
+    font-weight: normal;
+    font-size: 40px;
+    font-style: normal;
+    color: rgb(201, 241, 23);
+    text-shadow: 1px 1px 2px rgb(150, 167, 124), 0 0 1em rgb(150, 167, 124), 0 0 0.2em rgb(150, 167, 124);
+}
+
+p {
+    font-size: 35px;
+}
+
+span {
+    font-size: 30px;
+}
+
+#inputArea {
+    display: flex;
+    margin-top: -30px;
+    margin-left: 130px;
+}
+
+#textArea {
+    display: flex;
+
+    width: 10em;
+    height: 10em;
+
+    font-size: 30px;
+    font-family: "VT323", monospace;
+    padding-left: 5px;
+
+    resize: none;
+    color: rgb(201, 241, 23);
+    background-color: green;
+    border: dotted;
+
+    text-transform: lowercase;
+}
+
+#textArea::placeholder {
+    color: rgb(111, 170, 23);
+}
+
+.button {
+    width: 9em;
+    height: 4em;
+    margin-top: 250px;
+    margin-left: 30px;
+
+
+    color: greenyellow;
+    background-color: rgb(12, 85, 12);
+    border: none;
+    font-family: "VT323";
+    font-size: 14px;
+    padding: 20px;
+    cursor: pointer;
+    border-radius: 20px;
+
+}
+
+
+#resultArea {
+    height: 12em;
+
+    float: right;
+    display: block;
+    margin-top: -2%;
+    margin-right: 2%;
+
+    font-size: 30px;
+    padding-left: 5px;
+
+    resize: none;
+    color: rgb(201, 241, 23);
+    background-color: green;
+    border: dotted;
+    font-family: "VT323";
+}
+
+#resultArea::placeholder {
+    color: rgb(111, 170, 23);
+}
+
+#resultadoParagraph {
+    display: block;
+    margin-top: -30%;
+    margin-left: 24em;
+}
+
+
+.noselect {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    /* iOS Safari */
+    -webkit-user-select: none;
+    /* Safari */
+    -khtml-user-select: none;
+    /* Konqueror HTML */
+    -moz-user-select: none;
+    /* Old versions of Firefox */
+    -ms-user-select: none;
+    /* Internet Explorer/Edge */
+    user-select: none;
+    /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
